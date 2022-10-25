@@ -2,17 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <data>
-        <variable
-            name="datafromviewmodel"
-            type="com.noreplypratap.random.viewmodel.MainViewModel" />
+
 
     </data>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".fragments.Random1Fragment">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,5 +97,4 @@
         </LinearLayout>
 
 
-    </FrameLayout>
 </layout>

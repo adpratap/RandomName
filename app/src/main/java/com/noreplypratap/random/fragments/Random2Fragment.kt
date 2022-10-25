@@ -12,13 +12,11 @@ import dagger.hilt.android.AndroidEntryPoint
 class Random2Fragment : Fragment() {
 
     private lateinit var binding: FragmentRandom2Binding
-    //private val mainViewModel : MainViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentRandom2Binding.inflate(inflater,container,false)
         //Glide.with(this).load(Constants.Image_URL).circleCrop().into(binding.image2)
         return binding.root
