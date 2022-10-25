@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.noreplypratap.random.model.RandomUser
 import com.noreplypratap.random.network.NetworkManager
 import com.noreplypratap.random.repository.Repository
+import com.noreplypratap.random.utils.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -18,13 +19,13 @@ class MainViewModel @Inject constructor(
     private val networkManager: NetworkManager
 ) : ViewModel() {
     private val _responseLiveData = MutableLiveData<RandomUser>()
-
     val responseLiveData: LiveData<RandomUser>
         get() = _responseLiveData
 
     fun getRandomNames() = viewModelScope.launch {
 
         if(networkManager.isOnline()) {
+            Constants.netStatus = true
             repository.getUserData().let { results ->
                 if (results.isSuccessful) {
                     _responseLiveData.postValue(results.body())
@@ -34,6 +35,7 @@ class MainViewModel @Inject constructor(
             }
         }else{
             Log.d("MVVMLOGDATA", "NO INTERNET")
+            Constants.netStatus = false
         }
 
     }

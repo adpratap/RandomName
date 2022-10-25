@@ -4,7 +4,6 @@
 
     <data>
 
-
     </data>
 
     <FrameLayout
@@ -12,22 +11,24 @@
         android:layout_height="match_parent"
         tools:context=".fragments.Random2Fragment">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
 
-            <ImageView
-                android:id="@+id/image2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-
-
-        </LinearLayout>
-
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:gravity="center">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:textSize="30sp"
+              android:text="No Internet..."/>
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Retry"
+              android:id="@+id/retrybtn"/>
+      </LinearLayout>
 
     </FrameLayout>
 </layout>
